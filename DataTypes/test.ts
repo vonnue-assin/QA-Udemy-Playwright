@@ -48,3 +48,19 @@ value = 42; // Reassigning value to a number
 console.log(value); // Output: 42
 value = true; // Reassigning value to a boolean
 console.log(value); // Output: true
+
+let id: number | string | boolean;
+id = 123;
+id = "ABC123";
+id = true;
+console.log("ID:", id); // Output: ID: true
+
+function show(): void {
+  console.log("This is a function with no parameters and no return value.");
+}
+show();
+
+function addition(a: number, b: number): number {
+  return a + b;
+}
+console.log("Addition:", addition(5, 10)); // Output: 15

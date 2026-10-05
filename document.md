@@ -381,9 +381,9 @@ It is written using the **pipe (`|`) operator**.
 ```typescript
 let userId: string | number;
 
-userId = "A101";  // ✅ Allowed
-userId = 101;     // ✅ Allowed
-userId = true;    // ❌ Error
+userId = "A101"; // ✅ Allowed
+userId = 101; // ✅ Allowed
+userId = true; // ❌ Error
 ```
 
 Here, `userId` can be **either a `string` or a `number`**, but not a `boolean`.
@@ -393,9 +393,9 @@ Here, `userId` can be **either a `string` or a `number`**, but not a `boolean`.
 ```typescript
 let status: "success" | "failed" | "pending";
 
-status = "success";  // ✅
-status = "failed";   // ✅
-status = "pending";  // ✅
+status = "success"; // ✅
+status = "failed"; // ✅
+status = "pending"; // ✅
 status = "completed"; // Error
 ```
 
@@ -414,3 +414,64 @@ This is useful when a value can have **different possible types or values**, but
 
 > `any` → **Anything is allowed**
 > `string | number` → **Only string OR number is allowed**
+
+### `void`
+
+The `void` type is mainly used for functions that do not return a value.
+
+```typescript
+function printMessage(): void {
+    console.log("Hello");
+}
+```
+
+### Function in TypeScript
+
+A **function** is a reusable block of code that performs a specific task. It can **accept inputs (parameters)** and optionally **return a value**.
+
+### Basic Example
+
+```typescript
+function greet(name: string): void {
+    console.log(`Hello, ${name}`);
+}
+
+greet("Achu");
+```
+
+Here:
+
+- `function` → keyword used to define a function
+- `greet` → function name
+- `name: string` → parameter with its type
+- `void` → the function does not return a value
+- `greet("Achu")` → calls the function
+
+### Function that returns a value
+
+```typescript
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+const result = add(10, 20);
+
+console.log(result); // 30
+```
+
+Here, `number` after `)` specifies that the function **returns a number**.
+
+### Why use functions?
+
+Functions help you:
+
+- **Reuse code**
+- **Avoid code duplication**
+- **Organize code into smaller tasks**
+- **Make code easier to maintain and test**
+
+### Easy way to remember
+
+> **Function = A reusable block of code that performs a specific task.**
+
+## Operators
